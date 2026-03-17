@@ -7,6 +7,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(OpenCV REQUIRED)
 
-add_executable(ImageProcessor src/main.cpp)
-target_link_libraries(ImageProcessor PRIVATE ${OpenCV_LIBS})
-target_include_directories(ImageProcessor PRIVATE ${OpenCV_INCLUDE_DIRS})
+add_executable(ImageProcessor.o src/main.cpp)
+target_link_libraries(ImageProcessor.o PRIVATE ${OpenCV_LIBS})
+target_include_directories(ImageProcessor.o PRIVATE ${OpenCV_INCLUDE_DIRS})

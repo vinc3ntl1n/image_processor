@@ -8,8 +8,8 @@ using namespace cv;
 
 int main()
 {
-    std::string image_path = samples::findFile("starry_night.jpg");
-    Mat img = imread(image_path, IMREAD_COLOR);
+    std::string image_path = "../assets/starrynight.jpg";
+    Mat img = imread(image_path, IMREAD_GRAYSCALE);
 
     if(img.empty())
     {
@@ -18,11 +18,11 @@ int main()
     }
 
     imshow("Display window", img);
-    int k = waitKey(0); // Wait for a keystroke in the window
+    int k = waitKey(0);
 
     if(k == 's')
     {
-        //imwrite("starry_night.png", img);
+        imwrite("starrynight.jpg", img);
     }
 
     return 0;
